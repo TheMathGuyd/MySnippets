@@ -1,0 +1,40 @@
+:root {
+--status-bar-height: 40px;
+}
+.status-bar {
+  top: 0;
+  bottom: auto;
+  height: var(--status-bar-height);
+  left: 0;
+  border-radius: 0px;
+  --status-bar-border-width: 0px 0px 1px 0px;
+  border-width: var(--status-bar-border-width)
+}
+.horizontal-main-container {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    flex: 1 0 0;
+    margin-top: var(--status-bar-height);
+}
+body:not(.is-fullscreen):not(.is-popout-window) #quick-explorer {
+    padding-left: calc(var(--frame-left-space) + var(--ribbon-width));
+}
+/* Fixing what quick-explorer broke... */
+body.is-frameless.is-hidden-frameless:not(.qe-hide-breadcrumbs) .status-bar, body:not(.is-frameless):not(.qe-hide-breadcrumbs) .status-bar {
+    position: absolute;
+}
+#quick-explorer .explorable-separator:before {
+    content: "/";
+}
+
+
+/* NEW STUFF */
+
+.status-bar-item.plugin-keyboard-analyzer.mod-clickable, .status-bar-item.plugin-mysnippets-plugin.MiniSettings-statusbar-button.mod-clickable, .status-bar-item.plugin-backlink.mod-clickable, .status-bar-item.plugin-pane-relief {
+    display: none;
+}
+.status-bar-item.plugin-obsidian-grandfather {
+    order: 10;
+}
+
