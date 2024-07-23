@@ -1,0 +1,79 @@
+/* LINKS (it is recommended that line-height be at least 1.5rem to use this format*/
+/* INTERNAL (in Preview) */
+.markdown-preview-view .internal-link {
+    padding-left: 0.1em; /* Make room for border */
+    padding-right: 0.1em; /* Make room for border */
+    border: 0.03rem dotted;
+    border-radius: 0.3rem;
+    text-decoration: none;
+}
+
+.markdown-preview-view .internal-link:hover {
+    text-decoration: underline;
+    color: var(--background-primary);
+    text-shadow:
+        0.05em 0 0em var(--text-normal),
+        -0.05em 0 0em var(--text-normal),
+        0 0.05em 0em var(--text-normal),
+        0 -0.05em 0em var(--text-normal);
+    background-color: var(--link-color);
+}
+
+.markdown-preview-view .internal-link:active {
+    color: var(--color-green);
+    text-decoration: underline;
+    text-shadow:
+        0.05em 0 0em var(--background-primary),
+        -0.05em 0 0em var(--background-primary),
+        0 0.05em 0em var(--background-primary),
+        0 -0.05em 0em var(--background-primary);
+    background-color: rgba(var(--color-pink-rgb), 0.15);
+}
+
+.markdown-rendered .internal-link.is-unresolved {
+    -webkit-filter: var(--link-unresolved-filter);
+}
+
+/* EXTERNAL (in Preview) */
+.external-link {
+    border: 0.03rem dotted;
+    border-radius: 0.3rem;
+    text-decoration: none;
+    padding-left: 0.1em; /* Make room for border */
+    padding-right: 0.1em; /* Make room for border */
+    background-image: none; /* REMOVE BOX WITH ARROW */
+}
+
+.external-link:hover {
+    text-decoration: underline;
+    color: var(--background-primary);
+    text-shadow:
+        0.05em 0 0em var(--text-normal),
+        -0.05em 0 0em var(--text-normal),
+        0 0.05em 0em var(--text-normal),
+        0 -0.05em 0em var(--text-normal);
+    background-color: var(--link-external-color);
+    word-break: break-word;
+}
+
+.external-link:active {
+    color: var(--color-green);
+    text-decoration: underline;
+    text-shadow:
+        0.05em 0 0em var(--background-primary),
+        -0.05em 0 0em var(--background-primary),
+        0 0.05em 0em var(--background-primary),
+        0 -0.05em 0em var(--background-primary);
+    background-color: rgba(var(--color-pink-rgb), 0.15);
+}
+
+/* INTERNAL (in Editor) */
+.cm-s-obsidian span.cm-hmd-internal-link {
+    text-decoration: none;
+}
+
+/* EXTERNAL (in Editor) */
+.cm-s-obsidian span.cm-link,
+.cm-s-obsidian span.cm-url {
+    text-decoration: none;
+}

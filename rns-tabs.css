@@ -1,0 +1,119 @@
+/* Rotated — not stacked — tabs */
+body {
+    --tab-font-size: 10px;
+    --header-height: 30px;
+    --tab-curve: 0px;
+    --tab-outline-width: 0.5px;
+}
+.workspace-tab-header-inner-icon {
+    visibility: hidden;
+    display: none !important;
+}
+.workspace-tab-header-new-tab {
+    visibility: hidden;
+    display: none;
+}
+
+.workspace-tabs:not(.mod-sidedock .workspace-tabs) {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+
+.workspace-leaf-resize-handle {
+    order: 0;
+}
+
+.workspace-tab-header-container:not(
+        .mod-sidedock .workspace-tab-header-container
+    ) {
+    order: 1;
+    background-color: var(--background-primary);
+    transform: rotate(90deg);
+    transform-origin: bottom left;
+    /* Adjust origin if needed */
+    position: absolute;
+    /* Position it absolutely within the parent */
+    top: 0;
+    /* Adjust as needed */
+    left: 0;
+    /* Adjust as needed */
+    display: flex;
+    flex-direction: row;
+    /* Change this to fit your layout */
+    height: var(--header-height);
+    /* Set the height based on your variable */
+    margin: 0;
+    width: calc(104vh); /* All the way to bottom of screen */
+}
+
+.workspace-tab-header {
+    min-width: 200px !important; /* Tab min-width */
+}
+
+.workspace-tab-header-inner {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding-inline-end: 0px !important;
+    padding-inline-start: 0px !important;
+}
+
+.workspace-tab-header-inner-title {
+    order: 1;
+    /* Place after linked icon */
+    text-align: left;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    transform: translate(-120%, 55%) rotate(-90deg);
+    transform-origin: top left;
+    margin-top: -0.5em;
+    margin-left: 55%;
+    padding-bottom: 20px !important;
+    letter-spacing: -0.65em;
+    width: var(--header-height) !important;
+    height: calc(1 * var(--tab-width));
+}
+
+.workspace
+    .mod-root
+    .workspace-tabs:not(.mod-stacked)
+    .workspace-tab-header
+    .workspace-tab-header-inner-close-button {
+    display: none !important;
+}
+
+.workspace-tab-container:not(.mod-sidedock .workspace-tab-container) {
+    order: 2;
+    padding-left: var(--header-height);
+    margin-left: auto;
+    /* Pushes the container to the right */
+    display: flex;
+}
+
+.mod-macos.is-hidden-frameless:not(.is-fullscreen):not(.is-popout-window)
+    .workspace-tabs.mod-top-left-space
+    .workspace-tab-header-container {
+    padding-left: 0px !important;
+    margin-top: calc(-1 * var(--header-height));
+}
+
+.mod-macos.is-hidden-frameless:not(.is-fullscreen):not(.is-popout-window)
+    .workspace-tabs:not(.mod-top-left-space)
+    .workspace-tab-header-container {
+    padding-left: 0px !important;
+    margin-top: calc(-1 * var(--header-height));
+}
+
+.mod-linked {
+    order: 0;
+}
+
+.workspace-tab-header
+    .workspace-tab-header-inner:has(
+        .workspace-tab-header-status-container .mod-linked
+    )
+    .workspace-tab-header-inner-title {
+    margin-left: calc(55% - 1.25em) !important;
+}

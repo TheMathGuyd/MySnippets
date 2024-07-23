@@ -1,0 +1,35 @@
+/* Invert ALL Images when in dark mode on Brightness alone. White->Black */
+.theme-dark
+    img:not(.site-body-left-column-site-logo):not(.site-header-logo):not(
+        [alt*="-noinv"]
+    ) {
+    filter: hue-rotate(180deg) invert(100%) brightness(1);
+}
+.theme-dark
+    img:not(.site-body-left-column-site-logo):not(
+        .site-header-logo
+    )[alt*="-noinv"] {
+    filter: none;
+}
+/* Scale logos to fit into line */
+img[alt*="-in-line-logo"],
+img[alt*="-in-line"] {
+    height: 0.85em;
+    width: auto;
+    max-height: 1em;
+    margin-top: 0;
+    margin-bottom: 5pt;
+    vertical-align: middle;
+    display: inline-block;
+}
+/* Floats */
+img[alt*="-float-right"] {
+    float: right;
+    width: 40%;
+    padding: 10px;
+}
+img[alt*="-float-left"] {
+    float: left;
+    width: 40%;
+    padding: 10px;
+}

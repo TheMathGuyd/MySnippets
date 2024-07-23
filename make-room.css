@@ -1,0 +1,244 @@
+/* hide metadata in reading */
+body {
+    --metadata-display-reading: none;
+    --file-margins: var(--size-4-4);
+    --tab-stacked-pane-width: 700px;
+    --tab-stacked-header-width: 20px;
+    --tab-stacked-font-size: 10px;
+    --search-icon-size: 10px;
+    --input-height: 16px;
+    --modal-width: 100vw;
+    --modal-height: 90vh;
+    --modal-max-width: 100vw;
+    --modal-max-height: 100vh;
+}
+/* Settings Pane */
+.modal.mod-settings .vertical-tab-header {
+    flex: 0 0 10%;
+    min-width: 160px;
+}
+.vertical-tab-header {
+    padding: 0.25em;
+}
+
+.vertical-tab-header-group-title,
+.vertical-tab-header-group {
+    padding: 0.125em;
+}
+.vertical-tab-nav-item {
+    padding: 0 0 0 0.25em;
+}
+.vertical-tab-content {
+    padding-top: 0.25em;
+    padding-bottome: 0.25em;
+    padding-left: 0.25em;
+    padding-right: 2em;
+}
+.vertical-tab-header * {
+    font-size: 10px !important;
+}
+.search-input-container input {
+    padding-inline-start: 20px;
+}
+.settings-search-container,
+.installed-plugins-container {
+    padding-top: 0.25em;
+}
+.setting-item-description {
+    padding-top: 1px;
+}
+.setting-item-description .u-pop {
+    height: 16px;
+    align-self: end;
+}
+/*.setting-item-description a ~ br {
+    display: none;
+}*/
+.setting-item {
+    padding: 0 0;
+}
+.setting-item-info:not(:has(.u-pop)) {
+    flex: 0 1 75%;
+}
+.setting-item-control {
+    gap: 0px;
+}
+.setting-item-control .clickable-icon {
+    padding: 0;
+}
+.setting-item-description:not(:has(.u-pop)) {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.setting-item-description > div:nth-of-type(1) {
+    order: 2;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 50%;
+    /* Adjust this value as needed */
+}
+
+.setting-item-description > div:nth-of-type(2) {
+    order: 1;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 50%;
+    /* Adjust this value as needed */
+}
+
+.setting-item-description > div:nth-of-type(3) {
+    order: 3;
+    width: 100%;
+    /* Ensure the third div starts on a new line */
+}
+div.modal.mod-community-modal.mod-sidebar-layout.mod-community-plugin
+    > div.modal-content
+    > div
+    > div.community-modal-controls
+    > div:nth-child(1)
+    > div.setting-item-info {
+    display: none;
+}
+
+/* Hide Tab bar header (use vert tabs instead) */
+.workspace
+    .mod-root
+    .workspace-tabs.mod-stacked
+    .workspace-tab-container
+    .workspace-tab-header-inner-icon {
+    visibility: hidden !important;
+    display: none !important;
+}
+.workspace
+    .mod-root
+    .workspace-tabs.mod-stacked
+    .workspace-tab-container
+    .workspace-tab-header-inner-close-button {
+    visibility: hidden !important;
+    display: none !important;
+}
+.mod-root .workspace-tab-header-status-icon,
+.mod-root .workspace-tab-header-inner-icon {
+    --icon-size: 12px;
+    --icon-stroke: 2px;
+}
+/*HIDE TAB BAR .workspace-tab-header-container {
+    visibility: hidden;
+    display: none;
+}*/
+.workspace
+    .mod-root
+    .workspace-tabs.mod-stacked
+    .workspace-tab-container
+    .workspace-tab-header-inner {
+    padding-top: 2px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 2px;
+    border-radius: 0;
+}
+
+/* Hide nav header */
+.nav-header {
+    visibility: hidden;
+    display: none;
+}
+
+/* Hide buttons near vault switcher */
+body:not(.is-mobile)
+    .workspace-split.mod-left-split
+    .workspace-sidedock-vault-profile
+    .workspace-drawer-vault-actions {
+    display: none !important;
+}
+
+/* Hide view header */
+.view-header {
+    display: none !important;
+}
+
+/* Hide sidebar buttons */
+.sidebar-toggle-button.mod-right,
+.sidebar-toggle-button.mod-left {
+    display: none;
+}
+.mod-macos.is-hidden-frameless:not(.is-popout-window)
+    .workspace
+    .workspace-tabs.mod-top-right-space
+    .workspace-tab-header-container {
+    padding-right: 4px;
+}
+
+/* Hide ribbon */
+.mod-macos.is-hidden-frameless:not(.is-fullscreen):not(.is-popout-window)
+    .workspace-tabs.mod-top-left-space
+    .workspace-tab-header-container {
+    padding-left: calc(var(--frame-left-space) + var(--ribbon-width));
+}
+
+.workspace-ribbon.mod-left {
+    display: none;
+}
+.workspace-ribbon.mod-right {
+    visibility: hidden;
+    position: absolute;
+}
+.workspace-split.mod-right-split {
+    margin-right: 0;
+}
+.workspace-split.mod-left-split {
+    margin-left: 0;
+}
+/*SPACING*/
+body {
+    --tab-width: 200px;
+    --nav-item-padding: 0em;
+    --nav-item-size: 11px;
+    --nav-item-children-padding-start: 0.5em;
+    --nav-item-children-margin-start: 0.5em;
+}
+.fn-whitespace-stop-collapsing .nav-folder-title-content {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+.fn-whitespace-stop-collapsing .nav-folder-collapse-indicator {
+    margin-top: 0 !important;
+    padding-left: 10px;
+}
+.nav-files-container {
+    flex-grow: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: var(--size-4-1) var(--size-4-3) var(--size-4-6) var(--size-4-3);
+}
+.nav-file {
+    margin-inline-start: -15px !important;
+}
+:not(.nav-folder-children) > .nav-file {
+    margin-inline-start: -20px !important;
+}
+.nav-file-title-content {
+    padding-left: 0px !important;
+}
+
+/* Left workspace fix since status bar at top*/
+.mod-macos.is-hidden-frameless:not(.is-fullscreen):not(.is-popout-window)
+    .workspace-tabs.mod-top-left-space
+    .workspace-tab-header-container {
+    padding-left: 0 !important;
+}
+
+/* Vault switcher*/
+body:not(.is-mobile)
+    .workspace-split.mod-left-split
+    .workspace-sidedock-vault-profile
+    .workspace-drawer-vault-switcher {
+    gap: var(--size-4-2);
+    overflow: hidden;
+    padding-left: 0;
+}
+/* Nav Buttons Container if not hidden */
+.nav-buttons-container {
+    justify-content: left;
+}

@@ -1,0 +1,24 @@
+/* Blockquote */
+.markdown-rendered blockquote {
+    --blockquote-color: var(--text-normal);
+    --blockquote-border-color: var(--text-normal);
+}
+
+/* General Callout */
+.callout {
+    --callout-color: var(--text-normal);
+    border: solid;
+    border-radius: 6px;
+}
+
+.callout .callout-icon {
+    /*display: none;*/
+}
+
+.callout .callout-title-inner {
+    font-style: bold;
+}
+
+.callout .callout-content {
+    font-style: normal;
+}

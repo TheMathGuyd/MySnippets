@@ -1,0 +1,39 @@
+mjx-mstyle[style="color: red;"] {
+    color: var(--color-red) !important;
+}
+
+mjx-mstyle[style="color: orange;"] {
+    color: var(--color-orange) !important;
+}
+
+mjx-mstyle[style="color: yellow;"] {
+    color: var(--color-yellow) !important;
+}
+
+mjx-mstyle[style="color: green;"] {
+    color: var(--color-green) !important;
+}
+
+mjx-mstyle[style="color: blue;"] {
+    color: var(--color-blue) !important;
+}
+
+mjx-mstyle[style="color: cyan;"] {
+    color: var(--color-cyan) !important;
+}
+
+mjx-mstyle[style="color: purple;"] {
+    color: var(--color-purple) !important;
+}
+
+mjx-mstyle[style="color: pink;"] {
+    color: var(--color-pink) !important;
+}
+
+mjx-mstyle[style="color: brown;"] {
+    color: var(--color-brown) !important;
+}
+
+mjx-mstyle[style="color: gray;"] {
+    color: var(--color-gray) !important;
+}
