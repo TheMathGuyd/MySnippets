@@ -1,3 +1,7 @@
+.markdown-source-view.mod-cm6 .cm-scroller {
+    font-family: var(--font-monospace-override);
+}
+
 /* Fix list space in editor to make it properly monospace*/
 .markdown-source-view.mod-cm6 {
     text-indent: 0px;
