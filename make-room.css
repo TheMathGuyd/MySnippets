@@ -144,6 +144,10 @@ div.modal.mod-community-modal.mod-sidebar-layout.mod-community-plugin
     visibility: hidden;
     display: none;
 }
+.mod-sidedock .workspace-tab-header-container {
+    display: none;
+    visibility: hidden;
+}
 
 /* Hide buttons near vault switcher */
 body:not(.is-mobile)
